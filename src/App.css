@@ -1,5 +1,6 @@
 *, html {
   width: 100%;
+  background-color: black;
 
 }
 
@@ -19,14 +20,14 @@ body {
   align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: rgb(119, 9, 62);
+  /* background-color: rgb(119, 9, 62); */
 }
 
-div{
+/* div{
   background-color: rgb(119, 9, 62);
 
 
-}
+} */
 
 .card-img{
  
@@ -35,23 +36,36 @@ div{
 }
 
 .navbar{
-  font-size: 20px;
-  font-weight: bold;
   color: whitesmoke;
-  background-color: blue;
+  background-color: black;
   display: flex;
    
 }
-.navbar-title,
-.navbar-subTitle
-{
+.navbar-title{
+  font-size: 17px;
   display: flex;
   justify-content: center;
-  }
-  /* .navbar-text,
-  .navbar-score {
-   
-    text-align: center;    
-  } */
-
+  margin-top: 25px;
   
+  }
+  .navbar-text
+  {
+   display: block;
+    text-align: center;    
+  }
+  .navbar-score {
+    background-color: black;
+
+  }
+  .navbar-subTitle{
+    font-size: 12px;
+    display: block;
+    background-color: black;
+    text-align: center;    
+
+  }
+  p{
+    background-color: black;
+    margin: 0px;
+    color: whitesmoke;
+  }
