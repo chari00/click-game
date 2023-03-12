@@ -45,9 +45,9 @@ function App() {
   return (
     <div>
       <nav className="navbar navbar-title bg-dark">Clicky Game</nav>
-      <nav className="navbar navbar-subTitle bg-primary">
-        Click an image to begin!
-      </nav>
+      <p className="navbar-subTitle bg-primary">
+        Test your memory, do not click the same image. <p className="='navbar-subTitle">Click an image to begin!</p>
+      </p>
       <nav className="navbar navbar-text">
         Score:<span className="navbar-score"> 0</span>
       </nav>
