@@ -1,13 +1,37 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 
 
 function App() {
-  // const topScoreHandler = ()=>{
-    
-  // }
 
+// const [resetScore, setResetScore] = useState (0)
+
+// function scoreHandler(spbCharUrl) {
+//   setResetScore(spbChar.map(spbChar => { if (spbChar.url=== spbCharUrl)  return {...spbChar, setCount(count=0))}}
+// }
+
+//   function compare(arr1,arr2){
+  
+//     if(!arr1  || !arr2) return
+   
+//      let result;
+   
+//    arr1.forEach((e1,i)=>arr2.forEach(e2=>{
+     
+//           if(e1.length > 1 && e2.length){
+//              result = compare(e1,e2);
+//           }else if(e1 !== e2 ){
+//              result = false
+//           }else{
+//              result = true
+//           }
+//      })
+//    )
+   
+//    return result
+   
+//  }
 
   const [spbChar, setSpbChar] = useState([
     { id: 1,
@@ -47,23 +71,23 @@ function App() {
       url: "https://media.thetab.com/blogs.dir/90/files/2022/01/271520735-663204678154092-3084552772495202642-n.jpg",
     },
   ]);
-
   const [count, setCount] = useState(0);
+  // const [topScore, setTopScore] = useState ([newCount])
 
-  const [newCount, setNewCount] = useState ('')
-  useEffect(() => {localStorage.setItem('newCount', JSON.stringify(newCount))})
+//   const [newCount, setNewCount] = useState ('')
+//   useEffect(() => {localStorage.setItem('newCount', JSON.stringify(newCount))})
 
   
-useEffect(() => {
-  const newCount = JSON.parse(localStorage.getItem('newCount'));
-  if (newCount) {
-    setNewCount(newCount);
-  }
-},[newCount]);
+// useEffect(() => {
+//   const newCount = JSON.parse(localStorage.getItem('newCount'));
+//   if (newCount) {
+//     setNewCount(newCount);
+//   }
+// },[newCount]);
 
   return (
     <div>
-      <button
+      {/* <button
         className="btn light dark"
         onClick={(event) => {
           event.target.value =
@@ -71,7 +95,7 @@ useEffect(() => {
         }}
       >       
         sun|moon
-      </button>
+      </button> */}
 
       <nav className="navbar navbar-title bg-dark">Clicky Game</nav>
       <p className="navbar-subTitle bg-primary">
@@ -87,6 +111,7 @@ useEffect(() => {
       </nav>
 
       <div className="card-container">
+         
         {spbChar.map((char) => {
           return (
             <div className="Card col-md-6 col-lg-4">
@@ -98,7 +123,9 @@ useEffect(() => {
                   setSpbChar([...spbChar.sort(() => 0.5 - Math.random())]);
                   setCount(count + 1);
                 }}
+               
               />
+              
             </div>
           );
         })}
