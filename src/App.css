@@ -1,7 +1,6 @@
 *, html {
   width: 100%;
-  background-color: black;
-
+  background-color:black
 }
 
 body {
@@ -15,24 +14,18 @@ body {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
-  gap: 5px 5px;
+  gap: 25px 25px;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
-  /* background-color: rgb(119, 9, 62); */
 }
 
-/* div{
-  background-color: rgb(119, 9, 62);
-
-
-} */
 
 .card-img{
  
- width: 40px important!;
- height: 50px;
+  width: 100px;
+  height: 80px;
 }
 
 .navbar{
@@ -69,3 +62,8 @@ body {
     margin: 0px;
     color: whitesmoke;
   }
+.btn{
+  width: 90px;
+  color: aqua;
+
+}
