@@ -5,85 +5,88 @@ import {  useState } from "react";
 
 function App() {
 
-// const [resetScore, setResetScore] = useState (0)
-
-// function scoreHandler(spbCharUrl) {
-//   setResetScore(spbChar.map(spbChar => { if (spbChar.url=== spbCharUrl)  return {...spbChar, setCount(count=0))}}
-// }
-
-//   function compare(arr1,arr2){
-  
-//     if(!arr1  || !arr2) return
-   
-//      let result;
-   
-//    arr1.forEach((e1,i)=>arr2.forEach(e2=>{
-     
-//           if(e1.length > 1 && e2.length){
-//              result = compare(e1,e2);
-//           }else if(e1 !== e2 ){
-//              result = false
-//           }else{
-//              result = true
-//           }
-//      })
-//    )
-   
-//    return result
-   
-//  }
 
   const [spbChar, setSpbChar] = useState([
-    { id: 1,
-      url: "https://64.media.tumblr.com/5b8f579afb69eebe64ad8efef66392ef/tumblr_nhn66gVk3M1u75st9o1_640.png",
+    { "id": 1,
+      "url": "https://64.media.tumblr.com/5b8f579afb69eebe64ad8efef66392ef/tumblr_nhn66gVk3M1u75st9o1_640.png",
+      "clicked": false
     },
-    {id: 2,
-      url: "https://64.media.tumblr.com/eecc0dabc950626bd32c902f28c4e7fa/tumblr_nj4rfrJwwD1u75st9o1_640.png",
+    {"id": 2,
+      "url": "https://64.media.tumblr.com/eecc0dabc950626bd32c902f28c4e7fa/tumblr_nj4rfrJwwD1u75st9o1_640.png",
+      "clicked": false
     },
-    {id: 3,
-      url: "https://i.pinimg.com/originals/df/8a/67/df8a670a28358af8f8213f40ec79f1d6.png",
+    {"id": 3,
+      "url": "https://i.pinimg.com/originals/df/8a/67/df8a670a28358af8f8213f40ec79f1d6.png",
+      "clicked": false
     },
-    {id: 4,
-      url: "https://i.pinimg.com/originals/8a/9a/86/8a9a86e2411a7a5fc9f415f6c5a54e52.jpg",
+    {"id": 4,
+      "url": "https://i.pinimg.com/originals/8a/9a/86/8a9a86e2411a7a5fc9f415f6c5a54e52.jpg",
+      "clicked": false
     },
-    {id: 5,
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTM_8dwrVUweR-9zBMjqVyAqo-0NTdnLWQ3g&usqp=CAU",
+    {"id": 5,
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTM_8dwrVUweR-9zBMjqVyAqo-0NTdnLWQ3g&usqp=CAU",
+      "clicked": false
     },
-    {id: 6,
-      url: "https://i.pinimg.com/originals/4d/d1/1a/4dd11a13ff5b32971b6461b9da9bc59b.png",
+    {"id": 6,
+      "url": "https://i.pinimg.com/originals/4d/d1/1a/4dd11a13ff5b32971b6461b9da9bc59b.png",
+      "clicked": false
     },
-    {id:7 ,
-      url: "https://i.pinimg.com/originals/72/16/62/721662bd9314be1072c8cf510dc321b7.png",
+    {"id":7 ,
+      "url": "https://i.pinimg.com/originals/72/16/62/721662bd9314be1072c8cf510dc321b7.png",
+      "clicked": false
     },
-    {id: 8,
-      url: "https://64.media.tumblr.com/053a07e0fbbc6199d5a70d61bb52cb2f/tumblr_ny3l5mMh8Q1u75st9o1_640.png",
+    {"id": 8,
+      "url": "https://64.media.tumblr.com/053a07e0fbbc6199d5a70d61bb52cb2f/tumblr_ny3l5mMh8Q1u75st9o1_640.png",
+      "clicked": false
     },
-    {id: 9,
-      url: "https://images.fandango.com/ImageRenderer/400/0/redesign/static/img/default_poster.png/0/images/masterrepository/other/INTRO2_EverettCollection_SpongeBobChars.JPG",
+    {"id": 9,
+      "url": "https://images.fandango.com/ImageRenderer/400/0/redesign/static/img/default_poster.png/0/images/masterrepository/other/INTRO2_EverettCollection_SpongeBobChars.JPG",
+      "clicked": false
     },
-    {id: 10,
-      url: "https://variety.com/wp-content/uploads/2019/03/spongebob.jpg?w=1000",
+    {"id": 10,
+      "url": "https://variety.com/wp-content/uploads/2019/03/spongebob.jpg?w=1000",
+      "clicked": false
     },
-    {id: 11,
-      url: "https://www.j-14.com/wp-content/uploads/2019/07/spongebob-squarepants-characters.jpg?fit=800%2C449&quality=86&strip=all",
+    {"id": 11,
+      "url": "https://www.j-14.com/wp-content/uploads/2019/07/spongebob-squarepants-characters.jpg?fit=800%2C449&quality=86&strip=all",
+      "clicked": false
     },
-    {id: 12,
-      url: "https://media.thetab.com/blogs.dir/90/files/2022/01/271520735-663204678154092-3084552772495202642-n.jpg",
+    {"id": 12,
+      "url": "https://media.thetab.com/blogs.dir/90/files/2022/01/271520735-663204678154092-3084552772495202642-n.jpg",
+      "clicked": false
     },
+    {"id": 13,
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeC6UCGjfsgOcBnW1p3v7Cm_6CTTqSgzhxGQ&usqp=CAU",
+      "clicked": false
+
+    },
+    {"id": 14,
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1TEzHs9HI_3QioyD49IWaQt9ITcQsaQImfA&usqp=CAU",
+    "clicked": false
+
+    },
+    {"id": 15,
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLeoDuOGDJdMNrUHIrfYaUyJqJCFlF4KuBeg&usqp=CAU",
+    "clicked": false
+
+    },
+    {"id": 16,
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYwfrwgU4E7E8ywr-azgnLCDNRCfZV7TFtt3h9vrSAwBOdiHaMoxK6-zoYdkdEYfoerbw&usqp=CAU",
+    "clicked": false
+
+    },
+    {"id": 17,
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN-LHgWY463mZd5ujQ4hTTR7RrmMqjuhNMPg&usqp=CAU",
+    "clicked": false
+
+    },
+    {"id": 18,
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1AJ5S_XspXp8MHl2RxTd65KFzeikDc_pUWw&usqp=CAU",
+    "clicked": false
+
+    }
   ]);
   const [count, setCount] = useState(0);
-  // const [topScore, setTopScore] = useState ([newCount])
-
-//   const [newCount, setNewCount] = useState ('')
-//   useEffect(() => {localStorage.setItem('newCount', JSON.stringify(newCount))})
-
-  
-// useEffect(() => {
-//   const newCount = JSON.parse(localStorage.getItem('newCount'));
-//   if (newCount) {
-//     setNewCount(newCount);
-//   }
-// },[newCount]);
 
   return (
     <div>
@@ -105,7 +108,7 @@ function App() {
       <nav className="navbar navbar-text">
         Score:<span className="navbar-score"> {count}</span>
         <span>
-          {" "}
+          
           | Top Score: <span> {count}</span>
         </span>
       </nav>
@@ -133,5 +136,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
