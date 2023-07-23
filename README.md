@@ -7,7 +7,7 @@
 - [Usage](#Usage)
 - [License](#License)
 - [Contributing](#Contributing)
-- [Test](#Test)
+- [Links](#Links)
 - [Questions](#Questions)
 
 ## Description
@@ -19,7 +19,12 @@ This is an App to test your memory.
 ## License
 This project is covered by MIT.
 ## Contributing
-## Test
+## Links
+### Deployed Website Url
+
+- https://click-game-mcc.netlify.app// 
+
+
 ## Questions
 
   
