@@ -1,4 +1,5 @@
-[
+// eslint-disable-next-line no-unused-vars
+const spbArray = [
     { "id": 1,
       "url": "https://64.media.tumblr.com/5b8f579afb69eebe64ad8efef66392ef/tumblr_nhn66gVk3M1u75st9o1_640.png",
       "clicked": false

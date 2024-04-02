@@ -3,7 +3,7 @@ import {  useState } from "react";
 
 
 
-function App() {
+export default function App() {
 
 
   const [spbChar, setSpbChar] = useState([
@@ -44,7 +44,7 @@ function App() {
       "clicked": false
     },
     {"id": 10,
-      "url": "https://variety.com/wp-content/uploads/2019/03/spongebob.jpg?w=1000",
+      "url": "https://variety.com/wp-content/uploads/2019/03/spongebob.jpg?w=640",
       "clicked": false
     },
     {"id": 11,
@@ -87,55 +87,57 @@ function App() {
     }
   ]);
   const [count, setCount] = useState(0);
+  const [topScore, setTopScore] = useState(0);
+
+  const handleClick = (id) => {
+    const updatedChar = spbChar.map((char) => {
+      if (char.id === id && !char.clicked) {
+        return { ...char, clicked: true };
+      }
+      return char;
+    });
+
+    setSpbChar([...updatedChar.sort(() => 0.5 - Math.random())]);
+
+    // Update score only if the image was not previously clicked
+    const clickedChar = spbChar.find((char) => char.id === id && !char.clicked);
+    if (clickedChar) {
+      setCount(count + 1);
+      if (count >= topScore) {
+        setTopScore(count + 1);
+      }
+    } else {
+      // Reset score if the clicked image was previously clicked
+      setCount(0);
+    }
+  };
 
   return (
-    <div>
-      {/* <button
-        className="btn light dark"
-        onClick={(event) => {
-          event.target.value =
-            event.target.value === "light" ? "dark" : "light";
-        }}
-      >       
-        sun|moon
-      </button> */}
-
-      <nav className="navbar navbar-title bg-dark">Clicky Game</nav>
+    <>
+      <nav className="navbar navbar-title bg-dark">Click Game</nav>
       <p className="navbar-subTitle bg-primary">
-        Test your memory, don't click same image twice!
-        <p className="='navbar-subTitle">Click an image to begin!</p>
+        Test your memory, don't click the same image twice!
+        <p className="navbar-subTitle">Click an image to begin!</p>
       </p>
       <nav className="navbar navbar-text">
         Score:<span className="navbar-score"> {count}</span>
         <span>
-          
-          | Top Score: <span> {count}</span>
+          | Top Score: <span> {topScore}</span>
         </span>
       </nav>
 
       <div className="card-container">
-         
-        {spbChar.map((char) => {
-          return (
-            <div className="Card col-md-6 col-lg-4">
-              <img
-                src={char.url}
-                className="card-img"
-                alt="spongebobChar"
-                onClick={() => {
-                  setSpbChar([...spbChar.sort(() => 0.5 - Math.random())]);
-                  setCount(count + 1);
-                }}
-               
-              />
-              
-            </div>
-          );
-        })}
+        {spbChar.map((char) => (
+          <div className="Card" key={char.id}>
+            <img
+              src={char.url}
+              className="card-img"
+              alt="spongeBobChar"
+              onClick={() => handleClick(char.id)}
+            />
+          </div>
+        ))}
       </div>
-    </div>
+    </>
   );
 }
-
-
-export default App;
